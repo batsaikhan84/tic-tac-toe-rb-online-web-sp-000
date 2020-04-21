@@ -69,10 +69,11 @@ end
 
 def won?(board)
   WIN_COMBINATIONS.detect do |win_combo_array|
-    board[win_combo_array[0]] == board[win_combo_array[1]] &&  board[win_combo_array[1]] == board[win_combo_array[2]] && position_taken?(board, win_combo_array[0])
-    win_combo_array
+      if board[win_combo_array[0]] == board[win_combo_array[1]] &&  board[win_combo_array[1]] == board[win_combo_array[2]] && position_taken?(board, win_combo_array[0])
+        return win_combo_array
+      end
   end
-  false
+  return false
 end
 
 def full?(board)
