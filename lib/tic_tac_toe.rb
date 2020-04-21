@@ -68,9 +68,7 @@ def current_player(board)
 end
 
 def won?(board)
-  WIN_COMBINATIONS.detect {|win_combo_array| board[win_combo_array[0]] == board[win_combo_array[1]] &&  board[win_combo_array[1]] == board[win_combo_array[2]] && position_taken?(board, win_combo_array[0])
-    win_combo_array
-  end
+  WIN_COMBINATIONS.detect {|win_combo_array| board[win_combo_array[0]] == board[win_combo_array[1]] &&  board[win_combo_array[1]] == board[win_combo_array[2]] && position_taken?(board, win_combo_array[0])}
 end
 
 def full?(board)
