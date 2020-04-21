@@ -72,6 +72,7 @@ def won?(board)
     board[win_combo_array[0]] == board[win_combo_array[1]] &&  board[win_combo_array[1]] == board[win_combo_array[2]] && position_taken?(board, win_combo_array[0])
     win_combo_array
   end
+  false
 end
 
 def full?(board)
